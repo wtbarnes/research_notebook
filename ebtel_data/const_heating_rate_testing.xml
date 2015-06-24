@@ -15,8 +15,8 @@
 	<usage_option>dem</usage_option>
 	<output_file>/Users/willbarnes/Documents/Rice/Research/research_notebook/ebtel_data/const_heating_rate_testing</output_file>
 	<heating_shape>triangle</heating_shape>
-	<amp0>1.54085580943e+25</amp0>
-	<amp1>1.54085580943e+26</amp1>
+	<amp0>1.088</amp0>
+	<amp1>10.88</amp1>
 	<total_time>80000</total_time>
 	<ic_mode>st_eq</ic_mode>
 	<t_pulse_half>50.0</t_pulse_half>
@@ -44,24 +44,24 @@
 	<index_dem>451</index_dem>
 	<h_nano>3.2</h_nano>
 	<t_start>100.0</t_start>
-	<alpha>-2.5</alpha>
+	<alpha>-1.5</alpha>
 	<amp_array>
-		<amp_array0>1.60028992845</amp_array0>
-		<amp_array1>4.34934820604</amp_array1>
-		<amp_array2>2.87508100871</amp_array2>
-		<amp_array3>1.60464032096</amp_array3>
-		<amp_array4>3.15319733687</amp_array4>
-		<amp_array5>1.54963606763</amp_array5>
-		<amp_array6>1.98732635055</amp_array6>
-		<amp_array7>3.05663335278</amp_array7>
-		<amp_array8>1.72520896614</amp_array8>
-		<amp_array9>1.98574423992</amp_array9>
-		<amp_array10>2.62885477734</amp_array10>
-		<amp_array11>5.18098557265</amp_array11>
-		<amp_array12>2.09779552201</amp_array12>
-		<amp_array13>3.29551240984</amp_array13>
-		<amp_array14>1.7170663615</amp_array14>
-		<amp_array15>3.86044288549</amp_array15>
+		<amp_array0>1.13799075556</amp_array0>
+		<amp_array1>1.12092537526</amp_array1>
+		<amp_array2>1.70631968657</amp_array2>
+		<amp_array3>10.4469836787</amp_array3>
+		<amp_array4>2.07153202637</amp_array4>
+		<amp_array5>1.54413536536</amp_array5>
+		<amp_array6>1.2856748421</amp_array6>
+		<amp_array7>4.34957399532</amp_array7>
+		<amp_array8>6.03294268436</amp_array8>
+		<amp_array9>1.48100106768</amp_array9>
+		<amp_array10>1.23667653027</amp_array10>
+		<amp_array11>2.11628386525</amp_array11>
+		<amp_array12>8.31628332434</amp_array12>
+		<amp_array13>2.85708243071</amp_array13>
+		<amp_array14>10.3922222696</amp_array14>
+		<amp_array15>5.98592336838</amp_array15>
 	</amp_array>
 	<std_t_start>1000</std_t_start>
 	<solver>euler</solver>
