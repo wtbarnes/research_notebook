@@ -1,2 +1,4 @@
 #ignore checkpoints
 .ipynb_checkpoints
+#ignore data file
+ebtel_data/
