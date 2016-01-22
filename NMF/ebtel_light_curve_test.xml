@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<input>
+	<n0>100000000.0</n0>
+	<loop_length>40.0</loop_length>
+	<sat_limit>0.16666666666666666</sat_limit>
+	<print_plasma_params>True</print_plasma_params>
+	<rka_error>1e-06</rka_error>
+	<dem_option>new</dem_option>
+	<t_end_switch>file</t_end_switch>
+	<amp_switch>uniform</amp_switch>
+	<tau>1.0</tau>
+	<amp1>0.01</amp1>
+	<total_time>100</total_time>
+	<h_nano>0.4</h_nano>
+	<heat_flux_option>classical</heat_flux_option>
+	<sample_rate>50</sample_rate>
+	<mean_t_start>1000</mean_t_start>
+	<ic_mode>st_eq</ic_mode>
+	<index_dem>451</index_dem>
+	<t_pulse_half>25</t_pulse_half>
+	<std_t_start>1000</std_t_start>
+	<rad_option>rk</rad_option>
+	<start_time_array>
+		<start_time_array0>0.0</start_time_array0>
+	</start_time_array>
+	<end_time_array>
+		<end_time_array0>50.0</end_time_array0>
+	</end_time_array>
+	<amp0>0.001</amp0>
+	<heating_shape>triangle</heating_shape>
+	<alpha>1.5</alpha>
+	<t_start>0.0</t_start>
+	<usage_option>dem</usage_option>
+	<output_file>/home/wtb2/Documents/research_notebook/NMF/ebtel_light_curve_test</output_file>
+	<solver>euler</solver>
+	<T0>1000000.0</T0>
+	<t_start_switch>file</t_start_switch>
+	<h_back>3.5e-05</h_back>
+	<num_events>1</num_events>
+</input>
