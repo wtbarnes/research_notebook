@@ -2,5 +2,7 @@
 .ipynb_checkpoints
 #ignore data file
 ebtel_data/
+#ignore test figures file
+figure_builders/test_figs/
 #ignore pickled file
 *.pickle
