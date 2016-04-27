@@ -6,3 +6,5 @@ ebtel_data/
 figure_builders/test_figs/
 #ignore pickled file
 *.pickle
+#ignore all text files
+*.txt
