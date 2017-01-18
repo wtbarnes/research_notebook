@@ -1,3 +1,4 @@
 pro test_run
-setenv SSW /usr/local/ssw
+print,'Hi'
+print,'Foo Bar'
 end
