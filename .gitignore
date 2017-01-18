@@ -8,3 +8,11 @@ figure_builders/test_figs/
 *.pickle
 #ignore all text files
 *.txt
+#ignore all .gif files (by default)
+*.gif
+#ignore HDF5 files
+*.h5
+#ignore fits
+*.fits
+#ignore pics
+*.png
