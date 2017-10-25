@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<root>
+    <use_power_law_radiative_losses>True</use_power_law_radiative_losses>
+    <use_c1_loss_correction>True</use_c1_loss_correction>
+    <total_time>20000.0</total_time>
+    <use_adaptive_solver>True</use_adaptive_solver>
+    <loop_length>4000000000.0</loop_length>
+    <c1_rad0>0.6</c1_rad0>
+    <use_c1_grav_correction>True</use_c1_grav_correction>
+    <dem>
+        <use_new_method>True</use_new_method>
+        <temperature bins="451" log_max="8.5" log_min="4"/>
+    </dem>
+    <adaptive_solver_safety>0.5</adaptive_solver_safety>
+    <tau_max>1e+300</tau_max>
+    <adaptive_solver_error>1e-08</adaptive_solver_error>
+    <use_flux_limiting>True</use_flux_limiting>
+    <tau>1.0</tau>
+    <save_terms>False</save_terms>
+    <heating>
+        <background>3.5e-05</background>
+        <partition>1.0</partition>
+        <events>
+            <event decay_end="400" decay_start="200.0" magnitude="0.0" rise_end="200.0" rise_start="0"/>
+            <event decay_end="650" decay_start="450.0" magnitude="0.025" rise_end="450.0" rise_start="250"/>
+            <event decay_end="900" decay_start="700.0" magnitude="0.05" rise_end="700.0" rise_start="500"/>
+            <event decay_end="1150" decay_start="950.0" magnitude="0.075" rise_end="950.0" rise_start="750"/>
+            <event decay_end="1400" decay_start="1200.0" magnitude="0.1" rise_end="1200.0" rise_start="1000"/>
+            <event decay_end="1650" decay_start="1450.0" magnitude="0.125" rise_end="1450.0" rise_start="1250"/>
+            <event decay_end="1900" decay_start="1700.0" magnitude="0.15" rise_end="1700.0" rise_start="1500"/>
+            <event decay_end="2150" decay_start="1950.0" magnitude="0.175" rise_end="1950.0" rise_start="1750"/>
+            <event decay_end="2400" decay_start="2200.0" magnitude="0.2" rise_end="2200.0" rise_start="2000"/>
+            <event decay_end="2650" decay_start="2450.0" magnitude="0.225" rise_end="2450.0" rise_start="2250"/>
+            <event decay_end="2900" decay_start="2700.0" magnitude="0.25" rise_end="2700.0" rise_start="2500"/>
+            <event decay_end="3150" decay_start="2950.0" magnitude="0.275" rise_end="2950.0" rise_start="2750"/>
+            <event decay_end="3400" decay_start="3200.0" magnitude="0.3" rise_end="3200.0" rise_start="3000"/>
+            <event decay_end="3650" decay_start="3450.0" magnitude="0.325" rise_end="3450.0" rise_start="3250"/>
+            <event decay_end="3900" decay_start="3700.0" magnitude="0.35" rise_end="3700.0" rise_start="3500"/>
+            <event decay_end="4150" decay_start="3950.0" magnitude="0.375" rise_end="3950.0" rise_start="3750"/>
+            <event decay_end="4400" decay_start="4200.0" magnitude="0.4" rise_end="4200.0" rise_start="4000"/>
+            <event decay_end="4650" decay_start="4450.0" magnitude="0.425" rise_end="4450.0" rise_start="4250"/>
+            <event decay_end="4900" decay_start="4700.0" magnitude="0.45" rise_end="4700.0" rise_start="4500"/>
+            <event decay_end="5150" decay_start="4950.0" magnitude="0.475" rise_end="4950.0" rise_start="4750"/>
+            <event decay_end="5400" decay_start="5200.0" magnitude="0.5" rise_end="5200.0" rise_start="5000"/>
+            <event decay_end="5650" decay_start="5450.0" magnitude="0.525" rise_end="5450.0" rise_start="5250"/>
+            <event decay_end="5900" decay_start="5700.0" magnitude="0.55" rise_end="5700.0" rise_start="5500"/>
+            <event decay_end="6150" decay_start="5950.0" magnitude="0.575" rise_end="5950.0" rise_start="5750"/>
+            <event decay_end="6400" decay_start="6200.0" magnitude="0.6" rise_end="6200.0" rise_start="6000"/>
+            <event decay_end="6650" decay_start="6450.0" magnitude="0.625" rise_end="6450.0" rise_start="6250"/>
+            <event decay_end="6900" decay_start="6700.0" magnitude="0.65" rise_end="6700.0" rise_start="6500"/>
+            <event decay_end="7150" decay_start="6950.0" magnitude="0.675" rise_end="6950.0" rise_start="6750"/>
+            <event decay_end="7400" decay_start="7200.0" magnitude="0.7" rise_end="7200.0" rise_start="7000"/>
+            <event decay_end="7650" decay_start="7450.0" magnitude="0.725" rise_end="7450.0" rise_start="7250"/>
+            <event decay_end="7900" decay_start="7700.0" magnitude="0.75" rise_end="7700.0" rise_start="7500"/>
+            <event decay_end="8150" decay_start="7950.0" magnitude="0.775" rise_end="7950.0" rise_start="7750"/>
+            <event decay_end="8400" decay_start="8200.0" magnitude="0.8" rise_end="8200.0" rise_start="8000"/>
+            <event decay_end="8650" decay_start="8450.0" magnitude="0.825" rise_end="8450.0" rise_start="8250"/>
+            <event decay_end="8900" decay_start="8700.0" magnitude="0.85" rise_end="8700.0" rise_start="8500"/>
+            <event decay_end="9150" decay_start="8950.0" magnitude="0.875" rise_end="8950.0" rise_start="8750"/>
+            <event decay_end="9400" decay_start="9200.0" magnitude="0.9" rise_end="9200.0" rise_start="9000"/>
+            <event decay_end="9650" decay_start="9450.0" magnitude="0.925" rise_end="9450.0" rise_start="9250"/>
+            <event decay_end="9900" decay_start="9700.0" magnitude="0.95" rise_end="9700.0" rise_start="9500"/>
+            <event decay_end="10150" decay_start="9950.0" magnitude="0.975" rise_end="9950.0" rise_start="9750"/>
+            <event decay_end="10400" decay_start="10200.0" magnitude="1.0" rise_end="10200.0" rise_start="10000"/>
+            <event decay_end="10650" decay_start="10450.0" magnitude="0.9750000000000001" rise_end="10450.0" rise_start="10250"/>
+            <event decay_end="10900" decay_start="10700.0" magnitude="0.95" rise_end="10700.0" rise_start="10500"/>
+            <event decay_end="11150" decay_start="10950.0" magnitude="0.925" rise_end="10950.0" rise_start="10750"/>
+            <event decay_end="11400" decay_start="11200.0" magnitude="0.8999999999999999" rise_end="11200.0" rise_start="11000"/>
+            <event decay_end="11650" decay_start="11450.0" magnitude="0.875" rise_end="11450.0" rise_start="11250"/>
+            <event decay_end="11900" decay_start="11700.0" magnitude="0.8500000000000001" rise_end="11700.0" rise_start="11500"/>
+            <event decay_end="12150" decay_start="11950.0" magnitude="0.825" rise_end="11950.0" rise_start="11750"/>
+            <event decay_end="12400" decay_start="12200.0" magnitude="0.8" rise_end="12200.0" rise_start="12000"/>
+            <event decay_end="12650" decay_start="12450.0" magnitude="0.7749999999999999" rise_end="12450.0" rise_start="12250"/>
+            <event decay_end="12900" decay_start="12700.0" magnitude="0.75" rise_end="12700.0" rise_start="12500"/>
+            <event decay_end="13150" decay_start="12950.0" magnitude="0.7250000000000001" rise_end="12950.0" rise_start="12750"/>
+            <event decay_end="13400" decay_start="13200.0" magnitude="0.7" rise_end="13200.0" rise_start="13000"/>
+            <event decay_end="13650" decay_start="13450.0" magnitude="0.675" rise_end="13450.0" rise_start="13250"/>
+            <event decay_end="13900" decay_start="13700.0" magnitude="0.6499999999999999" rise_end="13700.0" rise_start="13500"/>
+            <event decay_end="14150" decay_start="13950.0" magnitude="0.625" rise_end="13950.0" rise_start="13750"/>
+            <event decay_end="14400" decay_start="14200.0" magnitude="0.6000000000000001" rise_end="14200.0" rise_start="14000"/>
+            <event decay_end="14650" decay_start="14450.0" magnitude="0.575" rise_end="14450.0" rise_start="14250"/>
+            <event decay_end="14900" decay_start="14700.0" magnitude="0.55" rise_end="14700.0" rise_start="14500"/>
+            <event decay_end="15150" decay_start="14950.0" magnitude="0.5249999999999999" rise_end="14950.0" rise_start="14750"/>
+            <event decay_end="15400" decay_start="15200.0" magnitude="0.5" rise_end="15200.0" rise_start="15000"/>
+            <event decay_end="15650" decay_start="15450.0" magnitude="0.4750000000000001" rise_end="15450.0" rise_start="15250"/>
+            <event decay_end="15900" decay_start="15700.0" magnitude="0.44999999999999996" rise_end="15700.0" rise_start="15500"/>
+            <event decay_end="16150" decay_start="15950.0" magnitude="0.42500000000000004" rise_end="15950.0" rise_start="15750"/>
+            <event decay_end="16400" decay_start="16200.0" magnitude="0.3999999999999999" rise_end="16200.0" rise_start="16000"/>
+            <event decay_end="16650" decay_start="16450.0" magnitude="0.375" rise_end="16450.0" rise_start="16250"/>
+            <event decay_end="16900" decay_start="16700.0" magnitude="0.3500000000000001" rise_end="16700.0" rise_start="16500"/>
+            <event decay_end="17150" decay_start="16950.0" magnitude="0.32499999999999996" rise_end="16950.0" rise_start="16750"/>
+            <event decay_end="17400" decay_start="17200.0" magnitude="0.30000000000000004" rise_end="17200.0" rise_start="17000"/>
+            <event decay_end="17650" decay_start="17450.0" magnitude="0.2749999999999999" rise_end="17450.0" rise_start="17250"/>
+            <event decay_end="17900" decay_start="17700.0" magnitude="0.25" rise_end="17700.0" rise_start="17500"/>
+            <event decay_end="18150" decay_start="17950.0" magnitude="0.2250000000000001" rise_end="17950.0" rise_start="17750"/>
+            <event decay_end="18400" decay_start="18200.0" magnitude="0.19999999999999996" rise_end="18200.0" rise_start="18000"/>
+            <event decay_end="18650" decay_start="18450.0" magnitude="0.17500000000000004" rise_end="18450.0" rise_start="18250"/>
+            <event decay_end="18900" decay_start="18700.0" magnitude="0.1499999999999999" rise_end="18700.0" rise_start="18500"/>
+            <event decay_end="19150" decay_start="18950.0" magnitude="0.125" rise_end="18950.0" rise_start="18750"/>
+            <event decay_end="19400" decay_start="19200.0" magnitude="0.10000000000000009" rise_end="19200.0" rise_start="19000"/>
+            <event decay_end="19650" decay_start="19450.0" magnitude="0.07499999999999996" rise_end="19450.0" rise_start="19250"/>
+            <event decay_end="19900" decay_start="19700.0" magnitude="0.050000000000000044" rise_end="19700.0" rise_start="19500"/>
+            <event decay_end="20150" decay_start="19950.0" magnitude="0.02499999999999991" rise_end="19950.0" rise_start="19750"/>
+        </events>
+    </heating>
+    <output_filename>heating_timelag_test</output_filename>
+    <calculate_dem>False</calculate_dem>
+    <saturation_limit>1.0</saturation_limit>
+    <helium_to_hydrogen_ratio>0.075</helium_to_hydrogen_ratio>
+    <force_single_fluid>False</force_single_fluid>
+    <c1_cond0>2.0</c1_cond0>
+</root>
