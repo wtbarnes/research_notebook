@@ -16,3 +16,8 @@ figure_builders/test_figs/
 *.fits
 #ignore pics
 *.png
+#ignore xml
+*.xml
+#ignore input and outout files
+*.input
+*.output
