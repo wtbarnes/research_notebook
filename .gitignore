@@ -1,3 +1,5 @@
+#ignore IDL sav data files
+*.sav
 */__pycache__/*
 #ignore checkpoints
 .ipynb_checkpoints
