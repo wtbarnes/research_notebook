@@ -67,7 +67,7 @@ def sav_to_hpc_map(sav_filename, distance=None, sav_key='magimage', sav_placehol
         'ctype1':'HPLN-TAN',
         'ctype2':'HPLT-TAN',
         'wcsname':'Helioprojective-cartesian',
-        'solar_b0':0.,
+        'crlt_obs':0.,
         'date-obs':datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
         'cdelt1':scale_1.value,
         'cdelt2':scale_2.value,
@@ -80,6 +80,7 @@ def sav_to_hpc_map(sav_filename, distance=None, sav_key='magimage', sav_placehol
         'dsun_obs':distance.value,
         'dsun_ref':distance.value,
         'rsun_ref':sunpy.sun.constants.radius.value,
+        'rsun_obs':sunpy.sun.constants.radius.value/distance.value*(180/np.pi*3600)
     })
     plot_settings = {'cmap':'hmimag', 'vmin':-5000, 'vmax':5000}
     return sunpy.map.GenericMap(data, map_meta, plot_settings=plot_settings)
