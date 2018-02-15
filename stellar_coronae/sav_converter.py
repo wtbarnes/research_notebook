@@ -14,10 +14,12 @@ import sunpy.cm
 import sunpy
 
 
-def sav_to_synoptic_map(filename, res_lon=0.1, res_lat=0.1):
+def sav_to_synoptic_map(filename, L0=0*u.deg, B0=0*u.deg, distance=None, res_lon=0.1, res_lat=0.1):
     """
     Convert Alison's sav file format to a synoptic map
     """
+    if distance is None:
+        distance = sunpy.sun.constants.au.to(u.m)
     # Read in data
     tmp = scipy.io.readsav(filename)
     # Convert coordinates to lat/lon in degrees
@@ -41,6 +43,11 @@ def sav_to_synoptic_map(filename, res_lon=0.1, res_lat=0.1):
         'cdelt2': np.diff(lat)[0],
         'cunit1': 'degree',
         'cunit2': 'degree',
+        'crlt_obs' : B0,
+        'crln_obs' : L0,
+        'date-obs' : datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
+        'dsun_obs':distance.value,
+        'dsun_ref':distance.value,
         'wcsname': 'Carrington Heliographic',
         'content': 'Carrington synoptic chart of simulated flux transport'
     })
@@ -49,7 +56,7 @@ def sav_to_synoptic_map(filename, res_lon=0.1, res_lat=0.1):
     return sunpy.map.Map(flux_grid, header, plot_settings={'cmap':'hmimag','norm':plt.Normalize(vmin=-lim,vmax=lim)})
 
 
-def sav_to_hpc_map(sav_filename, distance=None, sav_key='magimage', sav_placeholder=1e4, pad=None):
+def sav_to_hpc_map(sav_filename, L0=0*u.deg, B0=0*u.deg, distance=None, sav_key='magimage', sav_placeholder=1e4, pad=None, plot_settings=None):
     """
     Convert Alison's sav file format to a SunPy map
     """
@@ -60,14 +67,15 @@ def sav_to_hpc_map(sav_filename, distance=None, sav_key='magimage', sav_placehol
         data = np.pad(data, pad, 'constant', constant_values=np.nan)
     if distance is None:
         distance = sunpy.sun.constants.au
-    scale_1 = 2.*sunpy.sun.constants.radius/distance*(180/np.pi*3600*u.arcsec)/(n1*u.pixel)
-    scale_2 = 2.*sunpy.sun.constants.radius/distance*(180/np.pi*3600*u.arcsec)/(n2*u.pixel)
+    scale_1 = ((2.*sunpy.sun.constants.radius/distance).decompose() * u.radian).to(u.arcsec) / (n1*u.pixel)
+    scale_2 = ((2.*sunpy.sun.constants.radius/distance).decompose() * u.radian).to(u.arcsec) / (n2*u.pixel)
     map_meta = sunpy.util.metadata.MetaDict({
         'bunit':'Gauss',
         'ctype1':'HPLN-TAN',
         'ctype2':'HPLT-TAN',
         'wcsname':'Helioprojective-cartesian',
-        'crlt_obs':0.,
+        'hgln_obs':L0.value,
+        'hglt_obs':B0.value,
         'date-obs':datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
         'cdelt1':scale_1.value,
         'cdelt2':scale_2.value,
@@ -77,11 +85,13 @@ def sav_to_hpc_map(sav_filename, distance=None, sav_key='magimage', sav_placehol
         'crpix2':data.shape[0]/2,
         'cunit1':'arcsec',
         'cunit2':'arcsec',
-        'dsun_obs':distance.value,
-        'dsun_ref':distance.value,
-        'rsun_ref':sunpy.sun.constants.radius.value,
-        'rsun_obs':sunpy.sun.constants.radius.value/distance.value*(180/np.pi*3600)
+        'dsun_obs':distance.to(u.m).value,
+        'dsun_ref':distance.to(u.m).value,
+        'rsun_ref':sunpy.sun.constants.radius.to(u.m).value,
+        'rsun_obs':((sunpy.sun.constants.radius/distance).decompose() * u.radian).to(u.arcsec).value,
     })
-    plot_settings = {'cmap':'hmimag', 'vmin':-5000, 'vmax':5000}
-    return sunpy.map.GenericMap(data, map_meta, plot_settings=plot_settings)
+    _plot_settings = {'cmap':'hmimag', 'vmin':-5000, 'vmax':5000}
+    if plot_settings is not None:
+        _plot_settings.update(plot_settings)
+    return sunpy.map.GenericMap(data, map_meta, plot_settings=_plot_settings)
 
