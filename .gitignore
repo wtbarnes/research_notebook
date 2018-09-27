@@ -1,3 +1,7 @@
+#ignore asdf
+*.asdf
+#ignore movies
+*.mp4
 #ignore IDL sav data files
 *.sav
 */__pycache__/*
